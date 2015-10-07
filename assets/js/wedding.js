@@ -198,10 +198,49 @@ function scrollInit() {
 }
 
 function login() {
-	$.id('login').addEventListener('click', function () {
-		$.add(body, 'unlock');
+	var pwd = $.id('password');
 
-		scrollInit();
+	$.id('login').addEventListener('click', function () {
+		var isValid = true,
+			name = '',
+			room = '';
+
+		switch (pwd.value) {
+			case 'elephant':
+				name = 'Gill & Mike';
+				room = 'elephant';
+				break;
+			case 'lion':
+				name = 'John & Ellen';
+				room = 'river';
+				break;
+			case 'rhino':
+				name = 'Charlotte';
+				room = 'elephant';
+				break;
+			case 'leopard':
+				name = 'Megan';
+				room = 'elephant';
+				break;
+			default :
+				isValid = false;
+				break;
+		}
+
+		if (isValid) {
+			$.array($.all('.name')).forEach(function (el) {
+				el.innerText = name;
+			});
+			$('.room').innerText = room;
+			if (room !== 'elephant') {
+				$.array($.all('.images img')).forEach(function (el) {
+					el.src = el.src.replace('elephant', 'river');
+				});
+			}
+
+			$.add(body, 'unlock');
+			scrollInit();
+		}
 	});
 }
 
