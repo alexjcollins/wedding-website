@@ -46,7 +46,7 @@
 					H64C65.1,57.2,66.1,55,67,52.6z"></path>
 			</svg>
 
-			<input type="password" placeholder="Enter your password to gain access">
+			<input type="password" placeholder="Enter your password to gain access" id="password">
 
 			<button id="login">Let Me In</button>
 		</section>
@@ -66,7 +66,7 @@
 					</svg>
 
 					<div class="invite">
-						<p>Dear {name}, You are cordially invited to the wedding of</p>
+						<p>Dear <span class="name"></span>, You are cordially invited to the wedding of</p>
 						<h1>Alex<!--
 							--><svg version="1.1" class="ampersand" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                            viewBox="0 0 594.2 645.3" style="enable-background:new 0 0 594.2 645.3;" xml:space="preserve">
@@ -1143,7 +1143,7 @@
 				<div class="inner">
 					<header>
 						<h1>Your Accommodation</h1>
-						<h3>{name}, you're going to be staying in {a beautiful elephant room}</h3>
+						<h3><span class="name"></span>, you're going to be staying in a beautiful <span class="room"></span> room</h3>
 					</header>
 
 					<div class="images">
@@ -1205,7 +1205,7 @@
 				<div class="inner">
 					<header>
 						<h1>A few more treats</h1>
-						<h3>{name}, we would like to say thank you for your support in coming
+						<h3><span class="name"></span>, we would like to say thank you for your support in coming
 							to our wedding so we've prepared the following experiences to enjoy</h3>
 					</header>
 
