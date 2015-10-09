@@ -1,6 +1,7 @@
 @orange: #e57732;
 @brown: #231f20;
 @break: 600px;
+@breakIpad: 1024px;
 
 @font-face {
 	font-family: 'gotham';
@@ -144,12 +145,9 @@ canvas {
 
 	transition: transform 2s ease;
 
-	@media (max-width: @break) {
+	@media (max-width: @breakIpad) {
 		overflow: auto;
-	}
-
-	@media only screen and (device-width: 768px) {
-		overflow: auto;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.unlock & {
@@ -174,7 +172,7 @@ canvas {
 	transform: translateX(40px);
 	transition: transform 1s ease;
 
-	@media (max-width: @break) {
+	@media (max-width: @breakIpad) {
 		display: none;
 	}
 
@@ -219,7 +217,7 @@ canvas {
 			transform: translateX(10px);
 			transition: opacity 0.3s ease, transform 0.3s ease;
 
-			@media (max-width: @break) {
+			@media (max-width: @breakIpad) {
 				display: none;
 			}
 		}
@@ -822,7 +820,7 @@ canvas {
 				line-height: 0.7;
 			}
 
-			.name {
+			.time-name {
 				display: flex;
 				justify-content: space-between;
 			}
